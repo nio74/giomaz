@@ -14,7 +14,7 @@
     <?php wp_head();?>
 </head>
 <body>
-    <?php wp_class('hello-class');?>
+   
     
 <?php wp_body_open();?>
 
