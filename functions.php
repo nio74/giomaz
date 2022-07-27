@@ -1,9 +1,18 @@
 <?php
 
 /**
-*Theme Functions
+*Theme Functionsù
+*
 *@package giomaz
 */
+echo '<pre>';
+print_r('GIOMAZ_DIR_PATH');
+wp_die();
+
+if(!defined('GIOMAZ_DIR_PATH')){
+    define('GIOMAZ_DIR_PATH', untrailingslashit(get_template_directory()));
+}
+require_once GIOMAZ_DIR_PATH .'/inc/helpers/autoloader.php';
 
 function giomaz_enqueue_script(){
 
