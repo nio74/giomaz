@@ -6,6 +6,7 @@
 *@package giomaz
 */
 
+use GIOMAZ_THEME\Inc\GIOMAZ_THEME;
 
 if(!defined('GIOMAZ_DIR_PATH')){
     define('GIOMAZ_DIR_PATH', untrailingslashit(get_template_directory()));
@@ -13,7 +14,13 @@ if(!defined('GIOMAZ_DIR_PATH')){
 
 require_once GIOMAZ_DIR_PATH .'/inc/helpers/autoloader.php';
 
+function giomaz_get_instance(){
 
+\GIOMAZ_THEME\Inc\GIOMAZ_THEME::get_instance();
+}
+
+//giomaz_get_instance();
+ 
 function giomaz_enqueue_script(){
 
     //Register Styles

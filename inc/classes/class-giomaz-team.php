@@ -12,6 +12,7 @@ class GIOMAZ_THEME{
     use Singleton;
 
     protected function __construct(){
+        wp_die('Funziona');
         //load class.
         $this->set_hooks();
     }
