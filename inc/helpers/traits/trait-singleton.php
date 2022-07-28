@@ -22,10 +22,10 @@
  *
  * If you specifically need multiple objects, then use a normal class.
  *
- * @package Aquila
+ * @package giomaz
  */
 
-namespace AQUILA_THEME\Inc\Traits;
+namespace GIOMAZ_THEME\Inc\Traits;
 
 trait Singleton {
 
