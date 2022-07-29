@@ -6,7 +6,7 @@
  */
 namespace GIOMAZ_THEME\Inc;
 
-use Giomaz_Theme\Inc\Traits\Singleton;
+use GIOMAZ_THEME\Inc\Traits\Singleton;
 
 class GIOMAZ_THEME{
     use Singleton;

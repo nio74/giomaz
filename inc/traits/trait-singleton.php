@@ -25,7 +25,7 @@
  * @package giomaz
  */
 
-namespace Giomaz_Theme\Inc\Traits;
+namespace GIOMAZ_THEME\Inc\Traits;
 
 trait Singleton {
 
@@ -37,7 +37,6 @@ trait Singleton {
 	 * do once, such as hooking into actions and filters, etc.
 	 */
 	protected function __construct() {
-		
 		
 	}
 
