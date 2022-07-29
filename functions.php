@@ -6,7 +6,6 @@
 *@package giomaz
 */
 
-use GIOMAZ_THEME\Inc\GIOMAZ_THEME;
 
 if(!defined('GIOMAZ_DIR_PATH')){
     define('GIOMAZ_DIR_PATH', untrailingslashit(get_template_directory()));
@@ -14,12 +13,12 @@ if(!defined('GIOMAZ_DIR_PATH')){
 
 require_once GIOMAZ_DIR_PATH .'/inc/helpers/autoloader.php';
 
-function giomaz_get_instance(){
-
-\GIOMAZ_THEME\Inc\GIOMAZ_THEME::get_instance();
+function giomaz_get_theme_instance(){
+   
+    \GIOMAZ_THEME\Inc\GIOMAZ_THEME::get_instance();
 }
 
-//giomaz_get_instance();
+giomaz_get_theme_instance();
  
 function giomaz_enqueue_script(){
 
@@ -42,4 +41,3 @@ function giomaz_enqueue_script(){
 
 }
 add_action( 'wp_enqueue_scripts', 'giomaz_enqueue_script');
-?>

@@ -6,7 +6,7 @@
  */
 namespace GIOMAZ_THEME\Inc;
 
-use GIOMAZ_THEME\Inc\Traits\Singleton;
+use Giomaz_Theme\Inc\Traits\Singleton;
 
 class GIOMAZ_THEME{
     use Singleton;
@@ -19,5 +19,8 @@ class GIOMAZ_THEME{
 
     protected function set_hooks(){
         //actions and filters
+        
     }
+
+   
 }
