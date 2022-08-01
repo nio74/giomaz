@@ -68,7 +68,7 @@ function autoloader( $resource = '' ) {
 				break;
 		}
 
-		$resource_path = sprintf( '%s/inc/%s/%s.php', untrailingslashit( 'GIOMAZ_DIR_PATH' ), $directory, $file_name );
+		$resource_path = sprintf( '%s/inc/%s/%s.php', untrailingslashit( GIOMAZ_DIR_PATH ), $directory, $file_name );
 
 	}
 
@@ -84,4 +84,4 @@ function autoloader( $resource = '' ) {
 
 }
 
-spl_autoload_register( 'GIOMAZ_THEME\Inc\Helpers\autoloader' );
+spl_autoload_register( '\GIOMAZ_THEME\Inc\Helpers\autoloader' );

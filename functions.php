@@ -6,7 +6,7 @@
 *@package giomaz
 */
 
-use NOMEMIO\Giomaz_theme;
+
 
 if(!defined('GIOMAZ_DIR_PATH')){
     define('GIOMAZ_DIR_PATH', untrailingslashit(get_template_directory()));
@@ -18,7 +18,7 @@ require_once GIOMAZ_DIR_PATH . '/inc/helpers/autoloader.php';
 
 
  function giomaz_get_theme_instance(){
-   Giomaz_theme::get_instance();
+   \NOMEMIO\Giomaz_theme::get_instance();
    
 } 
 
