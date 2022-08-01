@@ -18,7 +18,7 @@ require_once GIOMAZ_DIR_PATH . '/inc/helpers/autoloader.php';
 
 
  function giomaz_get_theme_instance(){
-   \NOMEMIO\Giomaz_theme::get_instance();
+    \GIOMAZ_THEME\Inc\Giomaz_theme::get_instance();
    
 } 
 

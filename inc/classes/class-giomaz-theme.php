@@ -1,6 +1,6 @@
 <?php 
 
-namespace NOMEMIO;
+namespace GIOMAZ_THEME\Inc;
 
 use GIOMAZ_THEME\Inc\Traits\Singleton;
 
