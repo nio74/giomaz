@@ -6,19 +6,33 @@
 *@package giomaz
 */
 
+use NOMEMIO\Giomaz_theme;
 
 if(!defined('GIOMAZ_DIR_PATH')){
     define('GIOMAZ_DIR_PATH', untrailingslashit(get_template_directory()));
 }
 
-require_once GIOMAZ_DIR_PATH .'/inc/helpers/autoloader.php';
+require_once GIOMAZ_DIR_PATH . '/inc/helpers/autoloader.php';
+//require_once GIOMAZ_DIR_PATH . '/inc/classes/class-giomaz-theme.php';
 
-function giomaz_get_theme_instance(){
+
+
+ function giomaz_get_theme_instance(){
+   Giomaz_theme::get_instance();
    
-    \GIOMAZ_THEME\Inc\GIOMAZ_THEME::get_instance();
-}
+} 
 
 giomaz_get_theme_instance();
+
+/* require_once GIOMAZ_DIR_PATH . '/inc/classes/class-test.php';
+
+function istanziate_test_php(){
+    $t = new TEST_PHP\Test_php();
+    $t->prova_test();
+    
+} */
+
+//istanziate_test_php();
  
 function giomaz_enqueue_script(){
 

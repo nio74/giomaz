@@ -84,4 +84,4 @@ function autoloader( $resource = '' ) {
 
 }
 
-spl_autoload_register( '\GIOMAZ_THEME\Inc\Helpers\autoloader' );
+spl_autoload_register( 'GIOMAZ_THEME\Inc\Helpers\autoloader' );
