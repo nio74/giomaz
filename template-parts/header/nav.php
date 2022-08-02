@@ -5,7 +5,11 @@
  */
 ?>
 <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-light py-3">
-    <!-- <img src="images/Logo.png" alt="" width="30%" height="15% "> -->
+    <?php 
+    if ( function_exists( 'the_custom_logo' ) ) {
+      the_custom_logo();
+  }
+     ?>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
       aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
