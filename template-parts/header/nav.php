@@ -3,6 +3,12 @@
  * Header Navigation template
  * @package giomaz
  */
+
+
+
+$menu_class = \GIOMAZ_THEME\Inc\Menus::get_instance();
+$header_menu_id = $menu_class->get_menu_id('giomaz-header-menu');
+$header_menus   = wp_get_nav_menu_items( $header_menu_id );
 ?>
 <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-light py-3">
     <?php 
@@ -38,3 +44,12 @@
       </ul>
     </div>
   </nav>
+  <?php 
+    wp_nav_menu(
+			[
+				'theme_location'  => 'giomaz-header-menu',
+				'container_class' => 'primary-menu-container',
+			
+      ]
+		);
+  ?>
