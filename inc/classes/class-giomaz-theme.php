@@ -2,6 +2,7 @@
 
 namespace GIOMAZ_THEME\Inc;
 
+use AQUILA_THEME\Inc\Menus;
 use GIOMAZ_THEME\Inc\Traits\Singleton;
 
 //require_once GIOMAZ_DIR_PATH .'/inc/traits/trait-singleton.php';
@@ -14,6 +15,7 @@ class Giomaz_theme
     function __construct()
     {
         Assets::get_instance();
+        Menus::get_instance();
 
         $this->setup_hooks();
     }
