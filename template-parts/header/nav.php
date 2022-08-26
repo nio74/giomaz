@@ -25,45 +25,46 @@ $header_menus   = wp_get_nav_menu_items($header_menu_id);
     <?php
     if (!empty($header_menus) && is_array($header_menus)) {
     ?>
-      <ul class="navbar-nav ms-auto">
+      < class="navbar-nav ms-auto">
         <?php
         foreach ($header_menus as $menu_item) {
           if (!$menu_item->menu_item_parent) {
-            $child_menu_items = $menu_class->get_child_menu_items($header_menus,$menu_item->ID);
-            echo'<pre>';
-            print_r($child_menu_items);
-            wp_die();
+            $child_menu_items = $menu_class->get_child_menu_items($header_menus, $menu_item->ID);
+            $has_children = !empty($child_menu_items) && is_array($child_menu_items);
+            $has_sub_menu_class = !empty($has_children) ? 'has-submenu' : '';
+            $link_target        = !empty($menu_item->target) && '_blank' === $menu_item->target ? '_blank' : '_self';
+
+            if (!$has_children) {
         ?>
-            <li class="nav-item">
-              <a class="nav-link" href="contacts.html">CONTATTI</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">LABORATORI</a>
-              <div class="dropdown-menu">
-                <a href="#" class="dropdown-item">OROLOGERIA</a>
-                <a href="#" class="dropdown-item">OREFICERIA</a>
+              <li class="nav-item">
+                <a class="nav-link" href="<?php echo esc_url($menu_item->url); ?>">
+                  <?php echo esc_html($menu_item->title); ?>
+                </a>
+              </li>
+            <?php
+            } else {
+            ?>
+              <li class="nav-item dropdown" aria-labelledby="navbarDropdown">
+                <a href="<?php echo esc_url($menu_item->url); ?>" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><?php echo esc_html($menu_item->title); ?></a>
+                <div class="dropdown-menu">
+                  <?php
+                  foreach ($child_menu_items as $child_menu_item) {
+                    $link_target = !empty($child_menu_item->target) && '_blank' === $child_menu_item->target ? '_blank' : '_self';
+                  }
+                  ?>
+                  <a class="dropdown-item" href="<?php echo esc_url($child_menu_item->url); ?>
+                  " target="<?php echo esc_attr($link_target); ?>" title="<?php echo esc_attr($child_menu_item->title); ?>">>
+                    <?php echo esc_html($child_menu_item->title); ?>
+                  </a>
 
-              </div>
-            </li>
+                </div>
+              </li>
 
-
-            <li class="nav-item">
-              <a class="nav-link" href="">GIOIELLI GAUROSA</a>
-            </li>
-            <a class="nav-link" href="">SERVIZI</a>
-            </li>
       <?php
+            }
           }
         }
       }
       ?>
   </div>
 </nav>
-<?php
-wp_nav_menu(
-  [
-    'theme_location'  => 'giomaz-header-menu',
-    'container_class' => 'primary-menu-container',
-
-  ]
-);
