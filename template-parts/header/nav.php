@@ -25,7 +25,7 @@ $header_menus   = wp_get_nav_menu_items($header_menu_id);
     <?php
     if (!empty($header_menus) && is_array($header_menus)) {
     ?>
-      < class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto">
         <?php
         foreach ($header_menus as $menu_item) {
           if (!$menu_item->menu_item_parent) {
@@ -65,6 +65,7 @@ $header_menus   = wp_get_nav_menu_items($header_menu_id);
           }
         }
       }
+      
       ?>
   </div>
 </nav>
