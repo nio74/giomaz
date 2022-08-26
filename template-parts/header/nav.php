@@ -12,7 +12,7 @@ $header_menu_id = $menu_class->get_menu_id('giomaz-header-menu');
 $header_menus   = wp_get_nav_menu_items($header_menu_id);
 
 ?>
-<nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-light py-3">
+<nav class="navbar navbar-expand-lg navbar-light py-3">
   <div class="container">
     <?php
     if (function_exists('the_custom_logo')) {
