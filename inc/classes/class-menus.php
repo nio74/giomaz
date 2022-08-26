@@ -45,17 +45,11 @@ class Menus {
 
 		// Get all locations
 		$locations = get_nav_menu_locations();
-		
-		
-		
 
-		 // Get object id by location.
+		// Get object id by location.
 		$menu_id = ! empty($locations[$location]) ? $locations[$location] : '';
-		
-		
-		return ! empty( $menu_id ) ? $menu_id : ''; 
 
-		
+		return ! empty( $menu_id ) ? $menu_id : '';
 
 	}
 

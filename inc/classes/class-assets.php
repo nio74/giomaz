@@ -42,9 +42,9 @@ class Assets{
     {
 
         //Register Scripts
-        wp_register_script('main-js', GIOMAZ_DIR_URI. '/assets/main.js', fileatime(GIOMAZ_DIR_PATH . '/assets/main.js'), true);
+        wp_register_script('main-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js', ['jquery', 'slick-js'], fileatime(GIOMAZ_DIR_PATH . '/assets/main.js'), true);
         // wp_register_script('hide-navbar-js', get_template_directory_uri(). '/assets/hide-navbar.js', fileatime(get_template_directory().'/assets/hide-navbar.js'),true);
-        wp_register_script('bootstrap-js', GIOMAZ_DIR_URI . '/assets/src/library/js/bootstrap.min.js', [], false, true);
+        wp_register_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js', ['jquery'], false, true);
 
 
         //Enqueue Scripts
